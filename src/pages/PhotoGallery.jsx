@@ -1,48 +1,32 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 
 const PhotoGallery = () => {
-  const [file, setFile] = useState(null);
+  const [photoUrls, setPhotoUrls] = useState([]);
 
-  const handleFileChange = (event) => {
-    setFile(event.target.files[0]);
-  };
+  useEffect(() => {
+    const fetchPhotos = async () => {
+      try {
+        const response = await axios.get('http://localhost:5000/photos');
+        setPhotoUrls(response.data);
+      } catch (error) {
+        console.error('Error fetching photos:', error);
+      }
+    };
 
-  const handleUpload = async () => {
-    const formData = new FormData();
-    formData.append('file', file);
-
-    try {
-      await axios.post('http://localhost:5000/upload', formData);
-      console.log('File uploaded successfully');
-    } catch (error) {
-      console.error('Error uploading file:', error);
-    }
-  };
-
-  const handleDownload = async () => {
-    const key = 'your-file-key.jpg'; // Replace with the actual key
-
-    try {
-      const response = await axios.get(`http://localhost:5000/download/${key}`, {
-        responseType: 'blob',
-      });
-
-      // Use the response data as needed (e.g., display/download the file)
-      console.log('File downloaded successfully:', response.data);
-    } catch (error) {
-      console.error('Error downloading file:', error);
-    }
-  };
+    fetchPhotos();
+  }, []);
 
   return (
     <div>
-      <input type="file" onChange={handleFileChange} />
-      <button onClick={handleUpload}>Upload Image</button>
-      <button onClick={handleDownload}>Download Image</button>
+      <h2>Photo Viewer</h2>
+      <div style={{ display: 'flex', flexWrap: 'wrap' }}>
+        {photoUrls.map((url, index) => (
+          <img key={index} src={url} alt={`Photo ${index + 1}`} style={{ margin: '10px', width: '200px', height: '200px' }} />
+        ))}
+      </div>
     </div>
   );
 };
-
 
 export default PhotoGallery;

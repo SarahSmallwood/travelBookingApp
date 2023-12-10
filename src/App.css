@@ -38,9 +38,16 @@
 }
 .Navbar{
   border: solid whitesmoke;
+  background-color: rgb(39, 39, 160);
   border-width: 0.3em;
   height: 90px;
   width: 100%;
+  justify-content: space-evenly;
+}
+.header{
+  height: 70px;
+  display: flex;
+  justify-content: space-evenly;
 }
 .icons{
   height: 60px;
@@ -58,5 +65,20 @@
   align-content: center;
   margin-top: 30px;
   font-weight: bolder;
+}
+.aboutUs{
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 22px;
+}
+.about{
+  border: solid red;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 20px;
+  justify-content: left;
+}
+.para{
+  border: solid purple;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 15px;
 }
 
