@@ -33,7 +33,7 @@ Join us at Redhead Around the World Travels, where every trip is a story waiting
 
 Embark on your next adventure with us – because every journey begins with a step into the extraordinary.
         </p>
-        <h3>Redhead Around the World Travels
+        <h3 className='about'>Redhead Around the World Travels <br/>
 Discover the World, Create Memories</h3>
     </div>
     

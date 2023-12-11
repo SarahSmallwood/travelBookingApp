@@ -38,7 +38,6 @@
 }
 .Navbar{
   border: solid whitesmoke;
-  background-color: rgb(39, 39, 160);
   border-width: 0.3em;
   height: 90px;
   width: 100%;
@@ -59,7 +58,8 @@
 .icon{
   height: 60px;
   width: 150px;
-  color: whitesmoke;
+  color: tan;
+  text-decoration: none;
   font-size: 22px;
   font-family: Georgia, 'Times New Roman', Times, serif;
   align-content: center;
@@ -67,18 +67,64 @@
   font-weight: bolder;
 }
 .aboutUs{
+  margin: 30px;
+  display: flex;
+  border: solid green;
   font-family: Georgia, 'Times New Roman', Times, serif;
   font-size: 22px;
 }
 .about{
-  border: solid red;
+  border: solid #ff0000;
+  display: flex;
+  margin: 30px;
   font-family: Georgia, 'Times New Roman', Times, serif;
   font-size: 20px;
   justify-content: left;
 }
 .para{
   border: solid purple;
+  margin: 30px;
   font-family: Georgia, 'Times New Roman', Times, serif;
   font-size: 15px;
 }
+.tripPictures{
+  border: solid salmon;
+  height: 400px;
+}
+.ourTrips{
+  border: solid lawngreen;
+  height: 750px;
+  display: flex;
+}
+.tripOne{
+  border: solid blue;
+  height: 300px;
+  width: 25%;
+}
+.tripTwo{
+  border: solid red;
+  height: 300px;
+  width: 25%;
+}
+.tripThree{
+  border: solid green;
+  height: 300px;
+  width: 25%;
+}
+.tripFour{
+  border: solid rgb(0, 234, 255);
+  height: 300px;
+  width: 25%;
+}
+.tripFive{
+  border: solid yellow;
+  height: 300px;
+  width: 25%;
+}
+.tripSix{
+  border: solid black;
+  height: 300px;
+  width: 25%;
+}
+
 
