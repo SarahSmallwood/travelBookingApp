@@ -42,11 +42,13 @@
   height: 90px;
   width: 100%;
   justify-content: space-evenly;
+  text-decoration: none;
 }
 .header{
   height: 70px;
   display: flex;
   justify-content: space-evenly;
+  text-decoration: none;
 }
 .icons{
   height: 60px;
@@ -59,19 +61,21 @@
   height: 60px;
   width: 150px;
   color: tan;
-  text-decoration: none;
-  font-size: 22px;
+  font-size: 25px;
   font-family: Georgia, 'Times New Roman', Times, serif;
   align-content: center;
   margin-top: 30px;
   font-weight: bolder;
+  text-decoration: none;
 }
 .aboutUs{
   margin: 30px;
   display: flex;
   border: solid green;
-  font-family: Georgia, 'Times New Roman', Times, serif;
-  font-size: 22px;
+  font-family: "Lucida Handwriting", cursive;
+  text-decoration: underline;
+  font-size: 30px;
+  color: tan;
 }
 .about{
   border: solid #ff0000;
@@ -86,6 +90,7 @@
   margin: 30px;
   font-family: Georgia, 'Times New Roman', Times, serif;
   font-size: 15px;
+  font-weight: bolder;
 }
 .tripPictures{
   border: solid salmon;
@@ -125,6 +130,19 @@
   border: solid black;
   height: 300px;
   width: 25%;
+}
+.titleHome{
+   border: solid red;
+}
+.subTitle{
+  font-family: "Lucida Handwriting", cursive;
+  border: solid black;
+}
+.intro{
+  border: solid fuchsia;
+}
+.introPara{
+  border: solid yellow;
 }
 
 

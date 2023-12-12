@@ -6,7 +6,8 @@ import ImageCarousel from '../components/Carousel'
 
 function OurTrips() {
     const imageUrls= [
-
+      "s3://travelappratw/B0E3D885-E242-4A78-B12C-FA2FE3BB361E 2.jpg",
+      "s3://travelappratw/IMG_0706 2.jpg"
     ]
   return (
     <div>OurTrips

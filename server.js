@@ -8,13 +8,11 @@ app.use(express.json());
 
 // Set up AWS SDK with your credentials
 AWS.config.update({
-  accessKeyId: 'YOUR_ACCESS_KEY_ID',
-  secretAccessKey: 'YOUR_SECRET_ACCESS_KEY',
-  region: 'YOUR_AWS_REGION',
+  region: 'US East (Ohio) us-east-2',
 });
 
 const s3 = new AWS.S3();
-const bucketName = 'YOUR_S3_BUCKET_NAME';
+const bucketName = 'travelappratw';
 
 // Express route to fetch photo URLs from S3
 app.get('/photos', async (req, res) => {
