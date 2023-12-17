@@ -1,5 +1,6 @@
 const express = require('express');
 const AWS = require('aws-sdk');
+require('dotenv').config(); 
 
 const app = express();
 const port = process.env.PORT || 5000;
@@ -9,13 +10,15 @@ app.use(express.json());
 // Set up AWS SDK with your credentials
 AWS.config.update({
   region: 'US East (Ohio) us-east-2',
+  ARN:"",
+  S3URI:""
 });
 
 const s3 = new AWS.S3();
 const bucketName = 'travelappratw';
 
 // Express route to fetch photo URLs from S3
-app.get('/photos', async (req, res) => {
+app.get('/travelappratwphotos', async (req, res) => {
   try {
     const params = {
       Bucket: bucketName,
@@ -35,3 +38,4 @@ app.get('/photos', async (req, res) => {
 app.listen(port, () => {
   console.log(`Server is running on port ${port}`);
 });
+module.exports = router;
